@@ -1,0 +1,29 @@
+{
+  "name": "invoice-ninja",
+  "version": "0.1.1",
+  "description": "Invoice PDF generator API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nCrazed/invoice-ninja.git"
+  },
+  "keywords": [
+    "invoice",
+    "markdown",
+    "API",
+    "pdf"
+  ],
+  "author": "Edvin Malinovskis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nCrazed/invoice-ninja/issues"
+  },
+  "homepage": "https://github.com/nCrazed/invoice-ninja",
+  "dependencies": {
+    "markdown-pdf": "^2.2.0",
+    "sculpt": "^0.1.2"
+  }
+}
