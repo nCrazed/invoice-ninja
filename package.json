@@ -1,6 +1,6 @@
 {
   "name": "invoice-ninja",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Invoice PDF generator API",
   "main": "app.js",
   "scripts": {
