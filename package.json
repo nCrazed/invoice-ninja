@@ -1,6 +1,6 @@
 {
   "name": "invoice-ninja",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "description": "Invoice PDF generator API",
   "main": "app.js",
   "scripts": {
@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/nCrazed/invoice-ninja",
   "dependencies": {
+    "duplexer": "^0.1.1",
     "markdown-pdf": "^2.2.0",
-    "sculpt": "^0.1.2"
+    "split": "^0.3.0",
+    "through": "^2.3.4"
   }
 }

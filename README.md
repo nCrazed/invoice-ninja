@@ -13,14 +13,14 @@ Example Usage
 -------------
 ```js
 var fs = require('fs');
-var ninja = require('invoice-ninja');
+var Invoice = require('./index.js');
 
 today = new Date();
 due = new Date()
 due.setDate(today.getDate() + 14);
 
-options = {
-  currencyFormat: "£ %d",
+input = {
+  currencyFormat: "£%d",
   invoice_number: 1421,
   date_now: today.toDateString(),
   date_due: due.toDateString(),
@@ -36,7 +36,8 @@ options = {
   ]
 };
 
-ninja(options).pipe(fs.createWriteStream('invoice.pdf'));
+var invoice = new Invoice();
+invoice.generatePDFStream(input).pipe(fs.createWriteStream('invoice.pdf'));
 ```
 
 The above code would create a pdf file that looks like this:
@@ -45,87 +46,109 @@ The above code would create a pdf file that looks like this:
 Options
 -------
 
-#### options.currencyFormat
+Optional absolute paths to your custom template and/or css files.
+
+### options.baseTemplate
+Type: `String`
+
+Default: `template.md`
+
+### options.rowTemplate
+Type: `String`
+
+Default: `row.md`
+
+### options.cssPath
+Type: `String`
+
+Default: `bootstrap.css`
+
+Input
+-----
+
+All but `currencyFormat` are optional.
+
+#### input.currencyFormat
 Type: `String`
 
 Format string for currency values.
 It's passed to `util.format` as the first argument and should include 
 the currency symbol and the `%d` placeholder.
 
-#### options.invoice_number
+#### input.invoice_number
 Type: `String`
 
-#### options.date_now
+#### input.date_now
 Type: `String`
 
-#### options.date_due
+#### input.date_due
 Type: `String`
 
-#### options.subtotal
+#### input.subtotal
 Type: `Number`
 
-#### options.tax
+#### input.tax
 Type: `Number`
 
-#### options.shipping
+#### input.shipping
 Type: `Number`
 
-#### options.paid
+#### input.paid
 Type: `Number`
 
-#### options.balance
+#### input.balance
 Type: `Number`
 
-#### options.from_name
+#### input.from_name
 Type: `String`
 
-#### options.from_street
+#### input.from_street
 Type: `String`
 
-#### options.from_city
+#### input.from_city
 Type: `String`
 
-#### options.from_county
+#### input.from_county
 Type: `String`
 
-#### options.from_post_code
+#### input.from_post_code
 Type: `String`
 
-#### options.from_country
+#### input.from_country
 Type: `String`
 
-#### options.client_name
+#### input.client_name
 Type: `String`
 
-#### options.client_street
+#### input.client_street
 Type: `String`
 
-#### options.client_city
+#### input.client_city
 Type: `String`
 
-#### options.client_county
+#### input.client_county
 Type: `String`
 
-#### options.client_post_code
+#### input.client_post_code
 Type: `String`
 
-#### options.client_country
+#### input.client_country
 Type: `String`
 
-#### options.items
+#### input.items
 Type: `Array`
 
 Each element of the array represent a single item.
 
-#### options.items.description
+#### input.items.description
 Type: `String`
 
-#### options.items.quantity
+#### input.items.quantity
 Type: `String`
 
-#### options.items.rate
+#### input.items.rate
 Type: `Number`
 
-#### options.items.amount
+#### input.items.amount
 Type: `Number`
 
