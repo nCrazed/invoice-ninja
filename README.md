@@ -17,7 +17,7 @@ Example Usage
 -------------
 ```js
 var fs = require('fs');
-var Invoice = require('./index.js');
+var Invoice = require('invoice-ninja');
 
 today = new Date();
 due = new Date()
