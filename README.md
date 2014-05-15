@@ -3,6 +3,10 @@ invoice-ninja
 
 Simple invoice generator
 
+**Note:** *This module is* **not** *related to the PHP/Laravel invoicing site 
+[Invoice Ninja](https://www.invoiceninja.com/) or its 
+GitHub [repository](https://github.com/hillelcoren/invoice-ninja).*
+
 Getting Started
 ---------------
 ```bash
