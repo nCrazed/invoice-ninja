@@ -1,1 +1,1 @@
-module.exports = require('./lib/invoice-ninja')
+module.exports = require('./lib/invoice-ninja');
