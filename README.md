@@ -1,5 +1,6 @@
-invoice-ninja
+invoice-ninja [![Dependency Status](https://david-dm.org/ncrazed/invoice-ninja.svg?theme=shields.io)](https://david-dm.org/ncrazed/invoice-ninja)
 =============
+
 
 Simple invoice generator
 
